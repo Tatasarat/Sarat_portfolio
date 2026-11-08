@@ -1,16 +1,28 @@
-# React + Vite
+# Sarat's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React (Vite) frontend and Node.js (Express) backend.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Terminal 1:
 
-## React Compiler
+    cd server
+    npm install
+    npm start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Terminal 2:
 
-## Expanding the Oxlint configuration
+    cd client
+    npm install
+    npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Open http://localhost:5173. Contact messages from the form are saved to `server/messages.json`.
+
+## Deploy
+
+- Backend: deploy `server/` to Render as a Web Service (build `npm install`, start `npm start`). Set `ALLOWED_ORIGIN` to your frontend URL.
+- Frontend: deploy `client/` to Vercel or Netlify. Set `VITE_API_URL` to the backend URL.
+
+## Edit your content
+
+Projects, certificates, skills and journey live at the top of `client/src/App.jsx`. Add live-site links in the `live` field of each project. Replace `client/public/certificate.jpg` to change the certificate image.
